@@ -18,10 +18,11 @@ I generated LDML and charts for Linux from XKB data version 2.29.
 
 ### Generate LDML
 
+    xkbcli list > xkbcli-list.yaml
     python3 xkb_ldml.py
 
 ### Create charts
 
 Download CLDR data and tools from http://cldr.unicode.org/index/downloads . Extract data.
 
-    java -DCLDR_DIR=cldr -DCLDR_TMP_DIR=tmp -jar cldr-tools-38.1.jar showkeyboards
+    java -DCLDR_DIR=cldr -DCLDR_TMP_DIR=tmp -jar cldr-tools-40.0.jar showkeyboards

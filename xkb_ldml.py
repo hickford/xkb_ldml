@@ -1,7 +1,22 @@
 from lxml import etree
 from xkbcommon import xkb
-import subprocess, sys, os, hashlib
+import sys, os, hashlib
 import langcodes
+
+from typing import List, NamedTuple, Optional
+class LayoutDetails(NamedTuple):
+    """Details combining layout and optional variant"""
+    layout: str
+    variant: Optional[str]
+    brief: Optional[str]
+    description: Optional[str]
+    """Countries"""
+    iso3166: Optional[List[str]]
+    """Languages"""
+    iso639: Optional[List[str]]
+
+    def xkb_name(self) -> str:
+        return f"{self.layout}({self.variant})" if self.variant else self.layout
 
 xkb_context = xkb.Context()
 
@@ -45,31 +60,12 @@ def parse_compose(path):
 
 assert parse_compose("/usr/share/X11/locale/en_US.UTF-8/Compose")
 
-evdev = etree.parse("/usr/share/X11/xkb/rules/evdev.xml", etree.XMLParser(dtd_validation=True))
-def language(layout, variant):
+def language(layout: LayoutDetails) -> str:
     # https://tools.ietf.org/html/bcp47
-    if len(layout) == 3:
-        # Keyboard layouts for a language must use the 3-letter code from the ISO-639 standard.
-        return langcodes.standardize_tag(layout)
-    [layout_element] = evdev.xpath(f"//layout[configItem/name/text()='{layout}']")
-    languages = layout_element.xpath("configItem/languageList/iso639Id/text()")
-    language = "zz"
-    if languages:
-        language = languages[0]
-    if variant:
-        [variant_element] = layout_element.xpath(f"*/variant[configItem/name/text()='{variant}']")
-        languages = variant_element.xpath("configItem/languageList/iso639Id/text()")
-        if languages:
-            language = languages[0]   
-    tag = f"{language}-{layout}"
-    tag = langcodes.standardize_tag(tag)
-    speakers = langcodes.Language.get(tag).speaking_population()
-    if langcodes.Language.get(tag).speaking_population() < 100:
-        pass # print(f"Warning: surprising tag {tag:7} with {speakers} speakers for layout {layout_name(layout, variant)}", file=sys.stderr)
-    return tag
+    return langcodes.standardize_tag(layout.iso639[0] + "-" + layout.iso3166[0])
 
-assert language("gb", "colemak") == "en-GB"
-assert language("ng", "igbo") == "ig-NG"
+# assert language("gb", "colemak") == "en-GB"
+# assert language("ng", "igbo") == "ig-NG"
 
 # How to represent dead_tilde? An obvious idea is to use ~, but we don't want the non-dead tilde key to participate in transforms. We could set transform="no" on the non-dead tilde, but this would break sequences such as <Multi_key> <asciitilde> <A>
 dead_keys_to_unicode = {"dead_abovecomma": "\u0313","dead_abovedot": "\u0307","dead_abovereversedcomma": "\u0314","dead_abovering": "\u030a","dead_aboveverticalline": "\u030D","dead_acute": "\u0301","dead_belowbreve": "\u032E","dead_belowcircumflex": "\u032D","dead_belowcomma": "\u0326","dead_belowdiaeresis": "\u0324","dead_belowdot": "\u0323","dead_belowmacron": "\u0331","dead_belowring": "\u0325","dead_belowtilde": "\u0330","dead_belowverticalline": "\u0329","dead_breve": "\u0306","dead_caron": "\u030c","dead_cedilla": "\u0327","dead_circumflex": "\u0302","dead_diaeresis": "\u0308","dead_doubleacute": "\u030b","dead_doublegrave": "\u030F","dead_grave": "\u0300","dead_hook": "\u0309","dead_horn": "\u031B","dead_invertedbreve": "\u0311", "dead_iota": "\u0345","dead_longsolidusoverlay": "\u0338","dead_lowline": "\u0332","dead_macron": "\u0304","dead_ogonek": "\u0328","dead_semivoiced_sound": "\u309a","dead_tilde": "\u0303","dead_voiced_sound": "\u3099", "dead_stroke": "\u0338"}
@@ -77,19 +73,19 @@ dead_keys_to_unicode = {"dead_abovecomma": "\u0313","dead_abovedot": "\u0307","d
 def ldml_escape(char):
     return '\\u{' + str(hex(ord(char)))[2:].zfill(4) + '}'
 
-def ldml(rules=None, model=None, layout=None, variant=None, options=None):
+def ldml(layout: LayoutDetails, rules=None, model=None, options=None):
     # https://unicode.org/reports/tr35/tr35-keyboards.html
     if "(" in layout:
         raise ValueError("Prefer variant")
-    xkb_keymap = xkb_context.keymap_new_from_names(rules, model, layout, variant, options)
+    xkb_keymap = xkb_context.keymap_new_from_names(rules, model, layout.layout, layout.variant, options)
     keyboard = etree.Element("keyboard")
     # https://unicode.org/reports/tr35/tr35-keyboards.html#Keyboard_IDs
     # https://unicode.org/reports/tr35/tr35.html#Identifiers
     # TODO: get language using libxkbregistry
-    lang = language(layout, variant) # workaround 
+    lang = language(layout)
     locale = f"{lang}-t-k0-linux"
-    if variant:
-        variant_subtag = variant if 5 <= len(variant) <= 8 and variant.isalnum() else hashlib.sha1(variant.encode('utf8')).hexdigest()[:8]
+    if layout.variant:
+        variant_subtag = layout.variant if 5 <= len(layout.variant) <= 8 and layout.variant.isalnum() else hashlib.sha1(layout.variant.encode('utf8')).hexdigest()[:8]
         locale += f"-{variant_subtag}"
     keyboard.set("locale", locale)
     tree = etree.ElementTree(keyboard)
@@ -97,8 +93,8 @@ def ldml(rules=None, model=None, layout=None, variant=None, options=None):
     version.set("platform", "0")
     version.set("number", "$Revision$")
     names = etree.SubElement(keyboard, "names")
-    etree.SubElement(names, "name").set("value", xkb_keymap.layout_get_name(0))
-    etree.SubElement(names, "name").set("value", f"{layout}({variant})" if variant else layout)
+    etree.SubElement(names, "name").set("value", layout.description)
+    etree.SubElement(names, "name").set("value", layout.xkb_name())
     settings = etree.SubElement(keyboard, "settings")
     settings.set("transformFailure","omit")
     settings.set("transformPartial","hide")
@@ -181,41 +177,21 @@ def write_to_cldr(doc):
     # validate
     assert etree.parse(path, etree.XMLParser(dtd_validation=True))
 
-def list_layouts():
-    result = subprocess.run(["localectl", "list-x11-keymap-layouts"], capture_output=True)
-    result.check_returncode()
-    return result.stdout.decode("ascii").split()
 
-def list_variants(layout):
-    result = subprocess.run(["localectl", "list-x11-keymap-variants", layout], capture_output=True)
-    if b"Couldn't find any entries." in result.stderr:
-        return []
-    result.check_returncode()
-    return result.stdout.decode("ascii").split()
+def layouts_from_yaml_path(path: str) -> List[LayoutDetails]:
+    import ruamel.yaml
+    return [LayoutDetails(**layout) for layout in ruamel.yaml.safe_load(open(path))['layouts']]
 
-def list_layouts_and_variants():
-    for layout in list_layouts():
-        yield (layout, None)
-        for variant in list_variants(layout):
-            yield (layout, variant)
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-layout', default=None)
-    parser.add_argument('-variant', default=None)
-    args = parser.parse_args()
-    layouts_and_variants = [(args.layout,args.variant)] if args.layout or args.variant else list_layouts_and_variants()
-    layouts = [args.layout] if args.layout else list_layouts()
-    for layout in layouts:
-        variants = [args.variant] if args.variant else [None] + list_variants(layout)
-        for variant in variants:
-            try:
-                doc = ldml(layout=layout, variant=variant)
-            except Exception as e:
-                print(f"problem with layout {layout} variant {variant}: {e}", file=sys.stderr)
-                continue
-            write_to_cldr(doc)
+    yamL_path = sys.argv[1] if sys.argv[1:] else "xkbcli-list.yaml"
+    for layout in layouts_from_yaml_path(yamL_path):
+        try:
+            doc = ldml(layout=layout)
+        except Exception as e:
+            print(f"problem with layout {layout.xkb_name()}: {e}", file=sys.stderr)
+            continue
+        write_to_cldr(doc)
     #  subprocess.run(["java", "-DCLDR_DIR=cldr", "-DCLDR_TMP_DIR=tmp", "-jar", "cldr-tools-38.1.jar" , "showkeyboards" ,"-i", ".*linux.*"]).check_returncode()
 
 
