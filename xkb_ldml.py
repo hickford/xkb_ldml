@@ -1,5 +1,4 @@
 from lxml import etree
-from xkbcommon import xkb
 import sys, os, hashlib
 import langcodes
 
@@ -10,15 +9,21 @@ class LayoutDetails(NamedTuple):
     variant: Optional[str]
     brief: Optional[str]
     description: Optional[str]
-    """Countries"""
     iso3166: Optional[List[str]]
-    """Languages"""
+    """Countries"""
+
     iso639: Optional[List[str]]
+    """Languages"""
 
     def xkb_name(self) -> str:
         return f"{self.layout}({self.variant})" if self.variant else self.layout
 
-xkb_context = xkb.Context()
+def language(layout: LayoutDetails) -> str:
+    # https://tools.ietf.org/html/bcp47
+    return langcodes.standardize_tag(layout.iso639[0] + "-" + layout.iso3166[0])
+
+assert language(LayoutDetails(iso639=["eng"], iso3166=["GB"], layout=None, variant=None, description=None, brief=None)) == "en-GB"
+assert language(LayoutDetails(iso639=["fra"], iso3166=["FR"], layout=None, variant=None, description=None, brief=None)) == "fr-FR"
 
 positions_and_codes = []
 for line in open("iso-xkb-keynames.csv"):
@@ -60,10 +65,6 @@ def parse_compose(path):
 
 assert parse_compose("/usr/share/X11/locale/en_US.UTF-8/Compose")
 
-def language(layout: LayoutDetails) -> str:
-    # https://tools.ietf.org/html/bcp47
-    return langcodes.standardize_tag(layout.iso639[0] + "-" + layout.iso3166[0])
-
 # assert language("gb", "colemak") == "en-GB"
 # assert language("ng", "igbo") == "ig-NG"
 
@@ -72,6 +73,9 @@ dead_keys_to_unicode = {"dead_abovecomma": "\u0313","dead_abovedot": "\u0307","d
 
 def ldml_escape(char):
     return '\\u{' + str(hex(ord(char)))[2:].zfill(4) + '}'
+
+from xkbcommon import xkb
+xkb_context = xkb.Context()
 
 def ldml(layout: LayoutDetails, rules=None, model=None, options=None):
     # https://unicode.org/reports/tr35/tr35-keyboards.html
