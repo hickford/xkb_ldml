@@ -20,10 +20,14 @@ class LayoutDetails(NamedTuple):
 
 def language(layout: LayoutDetails) -> str:
     # https://tools.ietf.org/html/bcp47
-    return langcodes.standardize_tag(layout.iso639[0] + "-" + layout.iso3166[0])
+    tag = layout.iso639[0]
+    if layout.iso3166:
+        tag += "-" + layout.iso3166[0]
+    return langcodes.standardize_tag(tag)
 
 assert language(LayoutDetails(iso639=["eng"], iso3166=["GB"], layout=None, variant=None, description=None, brief=None)) == "en-GB"
 assert language(LayoutDetails(iso639=["fra"], iso3166=["FR"], layout=None, variant=None, description=None, brief=None)) == "fr-FR"
+assert language(LayoutDetails(iso639=["epo"], iso3166=[], layout=None, variant=None, description=None, brief=None)) == "eo"
 
 positions_and_codes = []
 for line in open("iso-xkb-keynames.csv"):
@@ -31,9 +35,6 @@ for line in open("iso-xkb-keynames.csv"):
     iso_position = parts[0]
     code = int(parts[2])
     positions_and_codes.append((iso_position, code))
-
-def layout_name(layout, variant):
-    return f"{layout}({variant or 'basic'})"
 
 locale_dir = "/usr/share/X11/locale"
 locale_to_compose_file = dict()
