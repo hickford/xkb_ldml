@@ -1,3 +1,4 @@
+from argparse import ArgumentError
 from lxml import etree
 import sys, os, hashlib
 import langcodes
@@ -20,6 +21,8 @@ class LayoutDetails(NamedTuple):
 
 def language(layout: LayoutDetails) -> str:
     # https://tools.ietf.org/html/bcp47
+    if not layout.iso639:
+        raise ValueError(f"no language for {layout.xkb_name()}")
     tag = layout.iso639[0]
     if layout.iso3166:
         tag += "-" + layout.iso3166[0]
@@ -50,7 +53,7 @@ for line in open(os.path.join(locale_dir, "compose.dir")):
 
 assert locale_to_compose_file['en_GB.UTF-8'] == '/usr/share/X11/locale/en_US.UTF-8/Compose'
 
-def parse_compose(path):
+def parse_compose(path: str) -> dict[tuple[str], str]:
     """Return a dict of tuple of key names to output character"""
     sequences_to_result = dict()
     for line in open(path):
@@ -72,21 +75,22 @@ assert parse_compose("/usr/share/X11/locale/en_US.UTF-8/Compose")
 # How to represent dead_tilde? An obvious idea is to use ~, but we don't want the non-dead tilde key to participate in transforms. We could set transform="no" on the non-dead tilde, but this would break sequences such as <Multi_key> <asciitilde> <A>
 dead_keys_to_unicode = {"dead_abovecomma": "\u0313","dead_abovedot": "\u0307","dead_abovereversedcomma": "\u0314","dead_abovering": "\u030a","dead_aboveverticalline": "\u030D","dead_acute": "\u0301","dead_belowbreve": "\u032E","dead_belowcircumflex": "\u032D","dead_belowcomma": "\u0326","dead_belowdiaeresis": "\u0324","dead_belowdot": "\u0323","dead_belowmacron": "\u0331","dead_belowring": "\u0325","dead_belowtilde": "\u0330","dead_belowverticalline": "\u0329","dead_breve": "\u0306","dead_caron": "\u030c","dead_cedilla": "\u0327","dead_circumflex": "\u0302","dead_diaeresis": "\u0308","dead_doubleacute": "\u030b","dead_doublegrave": "\u030F","dead_grave": "\u0300","dead_hook": "\u0309","dead_horn": "\u031B","dead_invertedbreve": "\u0311", "dead_iota": "\u0345","dead_longsolidusoverlay": "\u0338","dead_lowline": "\u0332","dead_macron": "\u0304","dead_ogonek": "\u0328","dead_semivoiced_sound": "\u309a","dead_tilde": "\u0303","dead_voiced_sound": "\u3099", "dead_stroke": "\u0338"}
 
-def ldml_escape(char):
+def ldml_escape(char: str) -> str:
     return '\\u{' + str(hex(ord(char)))[2:].zfill(4) + '}'
 
 from xkbcommon import xkb
-xkb_context = xkb.Context()
+if os.environ.get("XKB_CONFIG_ROOT"):
+    xkb_context = xkb.Context(no_default_includes=True)
+    xkb_context.include_path_append(os.environ.get("XKB_CONFIG_ROOT"))
+else:
+    xkb_context = xkb.Context()
 
-def ldml(layout: LayoutDetails, rules=None, model=None, options=None):
+def ldml(layout: LayoutDetails, rules=None, model=None, options=None) -> etree.ElementTree:
     # https://unicode.org/reports/tr35/tr35-keyboards.html
-    if "(" in layout:
-        raise ValueError("Prefer variant")
     xkb_keymap = xkb_context.keymap_new_from_names(rules, model, layout.layout, layout.variant, options)
     keyboard = etree.Element("keyboard")
     # https://unicode.org/reports/tr35/tr35-keyboards.html#Keyboard_IDs
     # https://unicode.org/reports/tr35/tr35.html#Identifiers
-    # TODO: get language using libxkbregistry
     lang = language(layout)
     locale = f"{lang}-t-k0-linux"
     if layout.variant:
@@ -113,18 +117,18 @@ def ldml(layout: LayoutDetails, rules=None, model=None, options=None):
             sym_name = xkb.keysym_get_name(sym)
             if sym_name in ("NoSymbol", "VoidSymbol"):
                 continue
-            sym_names_seen.add(sym_name)
             if char == None:
                 char = dead_keys_to_unicode.get(sym_name)
-                if char:
+                if char is not None:
                     char = ldml_escape(char)
-                    # print(char)
             if char != None:
+                sym_names_seen.add(sym_name)
                 map_element = etree.SubElement(keymap, "map")
                 map_element.set("iso", iso_position)
                 map_element.set("to", char)
             else:
-                pass # print(f"warning layout {layout_name(layout, variant)}: unsupported symbol {sym_name} ", file=sys.stderr)
+                pass
+                # print(f"warning layout {layout.xkb_name()}: unsupported symbol {sym_name} ", file=sys.stderr)
 
 
     empty_state = xkb_keymap.state_new()
@@ -156,7 +160,7 @@ def ldml(layout: LayoutDetails, rules=None, model=None, options=None):
         for sequence, result in sequences_to_result.items():
             if set(sequence).issubset(sym_names_seen):
                 transform = etree.SubElement(transforms, "transform")
-                def translate(sym_name):
+                def translate(sym_name: str) -> str:
                     if sym_name in dead_keys_to_unicode:
                         return ldml_escape(dead_keys_to_unicode[sym_name])
                     s = xkb.keysym_to_string(xkb.keysym_from_name(sym_name))
@@ -167,8 +171,6 @@ def ldml(layout: LayoutDetails, rules=None, model=None, options=None):
                 transform.set("to", result)
         if len(transforms) == 0:
             keyboard.remove(transforms)
-
-
 
     return tree
 
@@ -189,14 +191,16 @@ def layouts_from_yaml_path(path: str) -> List[LayoutDetails]:
 
 
 if __name__ == "__main__":
-    yamL_path = sys.argv[1] if sys.argv[1:] else "xkbcli-list.yaml"
-    for layout in layouts_from_yaml_path(yamL_path):
+    yaml_path = sys.argv[1] if sys.argv[1:] else "xkbcli-list.yaml"
+    for layout in layouts_from_yaml_path(yaml_path):
+        if layout.layout in ["custom", "brai"]:
+            continue
         try:
             doc = ldml(layout=layout)
+            write_to_cldr(doc)
         except Exception as e:
             print(f"problem with layout {layout.xkb_name()}: {e}", file=sys.stderr)
             continue
-        write_to_cldr(doc)
     #  subprocess.run(["java", "-DCLDR_DIR=cldr", "-DCLDR_TMP_DIR=tmp", "-jar", "cldr-tools-38.1.jar" , "showkeyboards" ,"-i", ".*linux.*"]).check_returncode()
 
 
