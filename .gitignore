@@ -1,2 +1,4 @@
 cldr/
+cldr-staging/
 cldr-tools-*.jar
+tmp/

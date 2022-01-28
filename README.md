@@ -9,7 +9,8 @@ Unicode's [Common Locale Data Repository](http://cldr.unicode.org/) (CLDR) colle
 
 ## Results
 
-I generated LDML and charts for Linux from XKB data version 2.29.
+I generated LDML and charts for Linux from [xkeyboard-config](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config)
+(commit [297bb515](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/commit/297bb51556bf72c26acc26b411cfab8116376d6e)):
 
 * LDML https://github.com/hickford/xkb_ldml/tree/cldr-keyboards-linux
 * Charts https://hickford.github.io/xkb_ldml/layouts/
