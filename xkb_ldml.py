@@ -3,17 +3,17 @@ from lxml import etree
 import sys, os, hashlib
 import langcodes
 
-from typing import List, NamedTuple, Optional
+from typing import NamedTuple, Optional
 class LayoutDetails(NamedTuple):
     """Details combining layout and optional variant"""
     layout: str
     variant: Optional[str]
     brief: Optional[str]
     description: Optional[str]
-    iso3166: Optional[List[str]]
+    iso3166: Optional[list[str]]
     """Countries"""
 
-    iso639: Optional[List[str]]
+    iso639: Optional[list[str]]
     """Languages"""
 
     def xkb_name(self) -> str:
@@ -28,9 +28,9 @@ def language(layout: LayoutDetails) -> str:
         tag += "-" + layout.iso3166[0]
     return langcodes.standardize_tag(tag)
 
-assert language(LayoutDetails(iso639=["eng"], iso3166=["GB"], layout=None, variant=None, description=None, brief=None)) == "en-GB"
-assert language(LayoutDetails(iso639=["fra"], iso3166=["FR"], layout=None, variant=None, description=None, brief=None)) == "fr-FR"
-assert language(LayoutDetails(iso639=["epo"], iso3166=[], layout=None, variant=None, description=None, brief=None)) == "eo"
+assert language(LayoutDetails(iso639=["eng"], iso3166=["GB"], layout="", variant=None, description=None, brief=None)) == "en-GB"
+assert language(LayoutDetails(iso639=["fra"], iso3166=["FR"], layout="", variant=None, description=None, brief=None)) == "fr-FR"
+assert language(LayoutDetails(iso639=["epo"], iso3166=[], layout="", variant=None, description=None, brief=None)) == "eo"
 
 positions_and_codes = []
 for line in open("iso-xkb-keynames.csv"):
@@ -53,7 +53,7 @@ for line in open(os.path.join(locale_dir, "compose.dir")):
 
 assert locale_to_compose_file['en_GB.UTF-8'] == '/usr/share/X11/locale/en_US.UTF-8/Compose'
 
-def parse_compose(path: str) -> dict[tuple[str], str]:
+def parse_compose(path: str) -> dict[tuple[str, ...], str]:
     """Return a dict of tuple of key names to output character"""
     sequences_to_result = dict()
     for line in open(path):
@@ -93,7 +93,7 @@ if os.environ.get("XKB_CONFIG_ROOT"):
 else:
     xkb_context = xkb.Context()
 
-def ldml(layout: LayoutDetails, rules=None, model=None, options=None) -> etree.ElementTree:
+def ldml(layout: LayoutDetails, rules=None, model=None, options=None) -> etree._ElementTree:
     # https://unicode.org/reports/tr35/tr35-keyboards.html
     xkb_keymap = xkb_context.keymap_new_from_names(rules, model, layout.layout, layout.variant, options)
     keyboard = etree.Element("keyboard")
@@ -110,7 +110,8 @@ def ldml(layout: LayoutDetails, rules=None, model=None, options=None) -> etree.E
     version.set("platform", "0")
     version.set("number", "$Revision$")
     names = etree.SubElement(keyboard, "names")
-    etree.SubElement(names, "name").set("value", layout.description)
+    if layout.description:
+        etree.SubElement(names, "name").set("value", layout.description)
     etree.SubElement(names, "name").set("value", layout.xkb_name())
     settings = etree.SubElement(keyboard, "settings")
     settings.set("transformFailure","omit")
@@ -194,7 +195,7 @@ def write_to_cldr(doc):
     assert etree.parse(path, etree.XMLParser(dtd_validation=True))
 
 
-def layouts_from_yaml_path(path: str) -> List[LayoutDetails]:
+def layouts_from_yaml_path(path: str) -> list[LayoutDetails]:
     import ruamel.yaml
     return [LayoutDetails(**layout) for layout in ruamel.yaml.safe_load(open(path))['layouts']]
 
