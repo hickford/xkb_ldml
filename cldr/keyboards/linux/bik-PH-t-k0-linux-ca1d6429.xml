@@ -1,0 +1,54 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="bik-PH-t-k0-linux-ca1d6429">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Filipino (Colemak, Baybayin)"/>
+    <name value="ph(colemak-bay)"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="E12" to="᜔"/>
+    <map iso="D02" to="ᜏ"/>
+    <map iso="D04" to="ᜉ"/>
+    <map iso="D05" to="ᜄ"/>
+    <map iso="D07" to="ᜎ"/>
+    <map iso="D08" to="ᜓ"/>
+    <map iso="D09" to="ᜌ"/>
+    <map iso="C01" to="ᜀ"/>
+    <map iso="C02" to="ᜍ"/>
+    <map iso="C03" to="ᜐ"/>
+    <map iso="C04" to="ᜆ"/>
+    <map iso="C05" to="ᜇ"/>
+    <map iso="C06" to="ᜑ"/>
+    <map iso="C07" to="ᜈ"/>
+    <map iso="C08" to="ᜒ"/>
+    <map iso="C09" to="ᜒ"/>
+    <map iso="C10" to="ᜓ"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B05" to="ᜊ"/>
+    <map iso="B06" to="ᜃ"/>
+    <map iso="B07" to="ᜋ"/>
+    <map iso="B08" to="᜵"/>
+    <map iso="B09" to="᜶"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="E12" to="᜔"/>
+    <map iso="D08" to="ᜂ"/>
+    <map iso="C07" to="ᜅ"/>
+    <map iso="C08" to="ᜁ"/>
+    <map iso="C09" to="ᜁ"/>
+    <map iso="C10" to="ᜂ"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="B00" to="|"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="B00" to="¦"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+</keyboard>
+

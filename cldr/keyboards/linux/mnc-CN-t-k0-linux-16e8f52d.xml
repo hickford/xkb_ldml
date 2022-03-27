@@ -1,0 +1,150 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="mnc-CN-t-k0-linux-16e8f52d">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Mongolian (Manchu Galik)"/>
+    <name value="cn(mon_manchu_galik)"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="E00" to="᠍"/>
+    <map iso="E11" to=" "/>
+    <map iso="D01" to="ᢀ"/>
+    <map iso="D02" to="ᢁ"/>
+    <map iso="D03" to="ᢂ"/>
+    <map iso="D04" to="ᢃ"/>
+    <map iso="D05" to="ᢄ"/>
+    <map iso="D06" to="ᢅ"/>
+    <map iso="D07" to="ᢆ"/>
+    <map iso="D08" to="ᢇ"/>
+    <map iso="D09" to="ᢈ"/>
+    <map iso="D10" to="ᢏ"/>
+    <map iso="C01" to="ᢒ"/>
+    <map iso="C02" to="ᢚ"/>
+    <map iso="C03" to="ᢛ"/>
+    <map iso="C04" to="ᢜ"/>
+    <map iso="C05" to="ᢝ"/>
+    <map iso="C06" to="ᢞ"/>
+    <map iso="C07" to="ᢟ"/>
+    <map iso="C08" to="ᢠ"/>
+    <map iso="C09" to="ᢡ"/>
+    <map iso="C11" to="᠋"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ᢢ"/>
+    <map iso="B02" to="ᢣ"/>
+    <map iso="B03" to="ᢤ"/>
+    <map iso="B04" to="ᢥ"/>
+    <map iso="B05" to="ᢨ"/>
+    <map iso="B06" to="ᢪ"/>
+    <map iso="B08" to="᠈"/>
+    <map iso="B09" to="᠉"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="E00" to="᠍"/>
+    <map iso="E06" to="‌"/>
+    <map iso="E08" to="‍"/>
+    <map iso="E11" to=" "/>
+    <map iso="D01" to="ᢀ"/>
+    <map iso="D02" to="ᢁ"/>
+    <map iso="D03" to="ᡝ"/>
+    <map iso="D04" to="ᢃ"/>
+    <map iso="D05" to="ᢄ"/>
+    <map iso="D06" to="ᢅ"/>
+    <map iso="D07" to="ᡠ"/>
+    <map iso="D08" to="ᡳ"/>
+    <map iso="D09" to="ᠣ"/>
+    <map iso="D10" to="ᢏ"/>
+    <map iso="C01" to="ᠠ"/>
+    <map iso="C02" to="ᢚ"/>
+    <map iso="C03" to="ᢛ"/>
+    <map iso="C04" to="ᢜ"/>
+    <map iso="C05" to="ᢝ"/>
+    <map iso="C06" to="ᢞ"/>
+    <map iso="C07" to="ᢟ"/>
+    <map iso="C08" to="ᢠ"/>
+    <map iso="C09" to="ᢡ"/>
+    <map iso="C11" to="᠌"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="ᢢ"/>
+    <map iso="B02" to="ᢣ"/>
+    <map iso="B03" to="ᢤ"/>
+    <map iso="B04" to="ᡡ"/>
+    <map iso="B05" to="ᢨ"/>
+    <map iso="B06" to="ᢪ"/>
+    <map iso="B08" to="᠈"/>
+    <map iso="B09" to="᠉"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="E00" to="᠍"/>
+    <map iso="E11" to=" "/>
+    <map iso="D01" to="ᢀ"/>
+    <map iso="D02" to="ᢁ"/>
+    <map iso="D03" to="ᢂ"/>
+    <map iso="D04" to="ᢃ"/>
+    <map iso="D05" to="ᢄ"/>
+    <map iso="D06" to="ᢅ"/>
+    <map iso="D07" to="ᢆ"/>
+    <map iso="D08" to="ᢇ"/>
+    <map iso="D09" to="ᢈ"/>
+    <map iso="D10" to="ᢏ"/>
+    <map iso="C01" to="ᢒ"/>
+    <map iso="C02" to="ᢚ"/>
+    <map iso="C03" to="ᢛ"/>
+    <map iso="C04" to="ᢜ"/>
+    <map iso="C05" to="ᢝ"/>
+    <map iso="C06" to="ᢞ"/>
+    <map iso="C07" to="ᢟ"/>
+    <map iso="C08" to="ᢠ"/>
+    <map iso="C09" to="ᢡ"/>
+    <map iso="C11" to="᠋"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ᢢ"/>
+    <map iso="B02" to="ᢣ"/>
+    <map iso="B03" to="ᢤ"/>
+    <map iso="B04" to="ᢥ"/>
+    <map iso="B05" to="ᢨ"/>
+    <map iso="B06" to="ᢪ"/>
+    <map iso="B08" to="᠈"/>
+    <map iso="B09" to="᠉"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="E00" to="᠍"/>
+    <map iso="E06" to="‌"/>
+    <map iso="E08" to="‍"/>
+    <map iso="E11" to=" "/>
+    <map iso="D01" to="ᢀ"/>
+    <map iso="D02" to="ᢁ"/>
+    <map iso="D03" to="ᡝ"/>
+    <map iso="D04" to="ᢃ"/>
+    <map iso="D05" to="ᢄ"/>
+    <map iso="D06" to="ᢅ"/>
+    <map iso="D07" to="ᡠ"/>
+    <map iso="D08" to="ᡳ"/>
+    <map iso="D09" to="ᠣ"/>
+    <map iso="D10" to="ᢏ"/>
+    <map iso="C01" to="ᠠ"/>
+    <map iso="C02" to="ᢚ"/>
+    <map iso="C03" to="ᢛ"/>
+    <map iso="C04" to="ᢜ"/>
+    <map iso="C05" to="ᢝ"/>
+    <map iso="C06" to="ᢞ"/>
+    <map iso="C07" to="ᢟ"/>
+    <map iso="C08" to="ᢠ"/>
+    <map iso="C09" to="ᢡ"/>
+    <map iso="C11" to="᠌"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="ᢢ"/>
+    <map iso="B02" to="ᢣ"/>
+    <map iso="B03" to="ᢤ"/>
+    <map iso="B04" to="ᡡ"/>
+    <map iso="B05" to="ᢨ"/>
+    <map iso="B06" to="ᢪ"/>
+    <map iso="B08" to="᠈"/>
+    <map iso="B09" to="᠉"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+</keyboard>
+

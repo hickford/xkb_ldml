@@ -1,4 +1,7 @@
-cldr/
-cldr-staging/
+cldr/**
+cldr-staging/**
 cldr-tools-*.jar
 tmp/
+!cldr/keyboards/
+!cldr/keyboards/linux/
+!cldr-staging/docs/charts/40/keyboards

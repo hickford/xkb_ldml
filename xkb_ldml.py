@@ -69,8 +69,6 @@ def parse_compose(path: str) -> dict[tuple[str, ...], str]:
 
 assert parse_compose("/usr/share/X11/locale/en_US.UTF-8/Compose")
 
-# assert language("gb", "colemak") == "en-GB"
-# assert language("ng", "igbo") == "ig-NG"
 
 # How to represent dead_tilde? An obvious idea is to use ~, but we don't want the non-dead tilde key to participate in transforms. We could set transform="no" on the non-dead tilde, but this would break sequences such as <Multi_key> <asciitilde> <A>
 dead_keys_to_unicode = {"dead_abovecomma": "\u0313","dead_abovedot": "\u0307","dead_abovereversedcomma": "\u0314","dead_abovering": "\u030a","dead_aboveverticalline": "\u030D","dead_acute": "\u0301","dead_belowbreve": "\u032E","dead_belowcircumflex": "\u032D","dead_belowcomma": "\u0326","dead_belowdiaeresis": "\u0324","dead_belowdot": "\u0323","dead_belowmacron": "\u0331","dead_belowring": "\u0325","dead_belowtilde": "\u0330","dead_belowverticalline": "\u0329","dead_breve": "\u0306","dead_caron": "\u030c","dead_cedilla": "\u0327","dead_circumflex": "\u0302","dead_diaeresis": "\u0308","dead_doubleacute": "\u030b","dead_doublegrave": "\u030F","dead_grave": "\u0300","dead_hook": "\u0309","dead_horn": "\u031B","dead_invertedbreve": "\u0311", "dead_iota": "\u0345","dead_longsolidusoverlay": "\u0338","dead_lowline": "\u0332","dead_macron": "\u0304","dead_ogonek": "\u0328","dead_semivoiced_sound": "\u309a","dead_tilde": "\u0303","dead_voiced_sound": "\u3099", "dead_stroke": "\u0338"}

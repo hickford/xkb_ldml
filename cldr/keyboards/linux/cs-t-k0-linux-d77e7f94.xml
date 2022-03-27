@@ -1,0 +1,134 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="cs-t-k0-linux-d77e7f94">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Czech (UCW, only accented letters)"/>
+    <name value="cz(ucw)"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="D01" to="ä"/>
+    <map iso="D02" to="ě"/>
+    <map iso="D03" to="é"/>
+    <map iso="D04" to="ř"/>
+    <map iso="D05" to="ť"/>
+    <map iso="D06" to="ý"/>
+    <map iso="D07" to="ů"/>
+    <map iso="D08" to="í"/>
+    <map iso="D09" to="ó"/>
+    <map iso="D10" to="ö"/>
+    <map iso="C01" to="á"/>
+    <map iso="C02" to="š"/>
+    <map iso="C03" to="ď"/>
+    <map iso="C04" to="ë"/>
+    <map iso="C05" to="ŕ"/>
+    <map iso="C06" to="ú"/>
+    <map iso="C07" to="ü"/>
+    <map iso="C08" to="ô"/>
+    <map iso="C09" to="ľ"/>
+    <map iso="C12" to="\"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ž"/>
+    <map iso="B02" to="ß"/>
+    <map iso="B03" to="č"/>
+    <map iso="B04" to="ç"/>
+    <map iso="B05" to="ñ"/>
+    <map iso="B06" to="ň"/>
+    <map iso="B07" to="ĺ"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="D01" to="Ä"/>
+    <map iso="D02" to="Ě"/>
+    <map iso="D03" to="É"/>
+    <map iso="D04" to="Ř"/>
+    <map iso="D05" to="Ť"/>
+    <map iso="D06" to="Ý"/>
+    <map iso="D07" to="Ů"/>
+    <map iso="D08" to="Í"/>
+    <map iso="D09" to="Ó"/>
+    <map iso="D10" to="Ö"/>
+    <map iso="C01" to="Á"/>
+    <map iso="C02" to="Š"/>
+    <map iso="C03" to="Ď"/>
+    <map iso="C04" to="Ë"/>
+    <map iso="C05" to="Ŕ"/>
+    <map iso="C06" to="Ú"/>
+    <map iso="C07" to="Ü"/>
+    <map iso="C08" to="Ô"/>
+    <map iso="C09" to="Ľ"/>
+    <map iso="C12" to="|"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="Ž"/>
+    <map iso="B02" to="ẞ"/>
+    <map iso="B03" to="Č"/>
+    <map iso="B04" to="Ç"/>
+    <map iso="B05" to="Ñ"/>
+    <map iso="B06" to="Ň"/>
+    <map iso="B07" to="Ĺ"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="D01" to="ä"/>
+    <map iso="D02" to="ě"/>
+    <map iso="D03" to="é"/>
+    <map iso="D04" to="ř"/>
+    <map iso="D05" to="ť"/>
+    <map iso="D06" to="ý"/>
+    <map iso="D07" to="ů"/>
+    <map iso="D08" to="í"/>
+    <map iso="D09" to="ó"/>
+    <map iso="D10" to="ö"/>
+    <map iso="C01" to="á"/>
+    <map iso="C02" to="š"/>
+    <map iso="C03" to="ď"/>
+    <map iso="C04" to="ë"/>
+    <map iso="C05" to="ŕ"/>
+    <map iso="C06" to="ú"/>
+    <map iso="C07" to="ü"/>
+    <map iso="C08" to="ô"/>
+    <map iso="C09" to="ľ"/>
+    <map iso="C12" to="\"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ž"/>
+    <map iso="B02" to="ß"/>
+    <map iso="B03" to="č"/>
+    <map iso="B04" to="ç"/>
+    <map iso="B05" to="ñ"/>
+    <map iso="B06" to="ň"/>
+    <map iso="B07" to="ĺ"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="D01" to="Ä"/>
+    <map iso="D02" to="Ě"/>
+    <map iso="D03" to="É"/>
+    <map iso="D04" to="Ř"/>
+    <map iso="D05" to="Ť"/>
+    <map iso="D06" to="Ý"/>
+    <map iso="D07" to="Ů"/>
+    <map iso="D08" to="Í"/>
+    <map iso="D09" to="Ó"/>
+    <map iso="D10" to="Ö"/>
+    <map iso="C01" to="Á"/>
+    <map iso="C02" to="Š"/>
+    <map iso="C03" to="Ď"/>
+    <map iso="C04" to="Ë"/>
+    <map iso="C05" to="Ŕ"/>
+    <map iso="C06" to="Ú"/>
+    <map iso="C07" to="Ü"/>
+    <map iso="C08" to="Ô"/>
+    <map iso="C09" to="Ľ"/>
+    <map iso="C12" to="|"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="Ž"/>
+    <map iso="B02" to="ẞ"/>
+    <map iso="B03" to="Č"/>
+    <map iso="B04" to="Ç"/>
+    <map iso="B05" to="Ñ"/>
+    <map iso="B06" to="Ň"/>
+    <map iso="B07" to="Ĺ"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+</keyboard>
+

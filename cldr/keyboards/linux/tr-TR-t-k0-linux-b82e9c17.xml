@@ -1,0 +1,118 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="tr-TR-t-k0-linux-b82e9c17">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Ottoman (F)"/>
+    <name value="tr(otf)"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="E00" to="&quot;"/>
+    <map iso="E01" to="۱"/>
+    <map iso="E02" to="۲"/>
+    <map iso="E03" to="۳"/>
+    <map iso="E04" to="۴"/>
+    <map iso="E05" to="۵"/>
+    <map iso="E06" to="۶"/>
+    <map iso="E07" to="۷"/>
+    <map iso="E08" to="۸"/>
+    <map iso="E09" to="۹"/>
+    <map iso="E10" to="۰"/>
+    <map iso="E11" to="-"/>
+    <map iso="E12" to="="/>
+    <map iso="D01" to="ف"/>
+    <map iso="D02" to="گ"/>
+    <map iso="D03" to="غ"/>
+    <map iso="D04" to="ع"/>
+    <map iso="D05" to="ط"/>
+    <map iso="D06" to="د"/>
+    <map iso="D07" to="ر"/>
+    <map iso="D08" to="ن"/>
+    <map iso="D09" to="ه"/>
+    <map iso="D10" to="پ"/>
+    <map iso="D11" to="ق"/>
+    <map iso="D12" to="ذ"/>
+    <map iso="C01" to="ص"/>
+    <map iso="C02" to="ض"/>
+    <map iso="C03" to="ه"/>
+    <map iso="C04" to="ا"/>
+    <map iso="C05" to="ح"/>
+    <map iso="C06" to="ت"/>
+    <map iso="C07" to="ک"/>
+    <map iso="C08" to="م"/>
+    <map iso="C09" to="ل"/>
+    <map iso="C10" to="ی"/>
+    <map iso="C11" to="ش"/>
+    <map iso="C12" to="خ"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ژ"/>
+    <map iso="B02" to="ث"/>
+    <map iso="B03" to="و"/>
+    <map iso="B04" to="ج"/>
+    <map iso="B05" to="چ"/>
+    <map iso="B06" to="ز"/>
+    <map iso="B07" to="س"/>
+    <map iso="B08" to="ب"/>
+    <map iso="B09" to="."/>
+    <map iso="B10" to="‘"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="E00" to="÷"/>
+    <map iso="E01" to="!"/>
+    <map iso="E02" to="٬"/>
+    <map iso="E03" to="٫"/>
+    <map iso="E04" to="﷼"/>
+    <map iso="E05" to="٪"/>
+    <map iso="E06" to="×"/>
+    <map iso="E07" to="،"/>
+    <map iso="E08" to="*"/>
+    <map iso="E09" to=")"/>
+    <map iso="E10" to="("/>
+    <map iso="E11" to="ـ"/>
+    <map iso="E12" to="+"/>
+    <map iso="D01" to="ً"/>
+    <map iso="D03" to="َ"/>
+    <map iso="D06" to="ٌ"/>
+    <map iso="D08" to="ڭ"/>
+    <map iso="D09" to="ئ"/>
+    <map iso="D11" to="ٰ"/>
+    <map iso="D12" to="ٖ"/>
+    <map iso="C01" to="ُ"/>
+    <map iso="C02" to="ِ"/>
+    <map iso="C03" to="َ"/>
+    <map iso="C06" to="ة"/>
+    <map iso="C07" to="ٍ"/>
+    <map iso="C08" to="ٓ"/>
+    <map iso="C10" to="ي"/>
+    <map iso="C11" to="ّ"/>
+    <map iso="C12" to="ء"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B02" to="آ"/>
+    <map iso="B03" to="ؤ"/>
+    <map iso="B04" to="أ"/>
+    <map iso="B06" to="ظ"/>
+    <map iso="B07" to="ْ"/>
+    <map iso="B08" to="إ"/>
+    <map iso="B09" to=":"/>
+    <map iso="B10" to="؛"/>
+    <map iso="A03" to="‌"/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="E01" to="`"/>
+    <map iso="E02" to="@"/>
+    <map iso="E03" to="#"/>
+    <map iso="E04" to="$"/>
+    <map iso="E05" to="%"/>
+    <map iso="E06" to="^"/>
+    <map iso="E07" to="&amp;"/>
+    <map iso="E08" to="•"/>
+    <map iso="E09" to="‎"/>
+    <map iso="E10" to="‏"/>
+    <map iso="B00" to="|"/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="B00" to="¦"/>
+  </keyMap>
+</keyboard>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="ml-t-k0-linux-99f11074">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Malayalam (Lalitha)"/>
+    <name value="in(mal_lalitha)"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="E00" to="്"/>
+    <map iso="E01" to="1"/>
+    <map iso="E02" to="2"/>
+    <map iso="E03" to="3"/>
+    <map iso="E04" to="4"/>
+    <map iso="E05" to="5"/>
+    <map iso="E06" to="6"/>
+    <map iso="E07" to="7"/>
+    <map iso="E08" to="8"/>
+    <map iso="E09" to="9"/>
+    <map iso="E10" to="0"/>
+    <map iso="E11" to="-"/>
+    <map iso="E12" to="="/>
+    <map iso="D01" to="ൈ"/>
+    <map iso="D02" to="വ"/>
+    <map iso="D03" to="െ"/>
+    <map iso="D04" to="ര"/>
+    <map iso="D05" to="ത"/>
+    <map iso="D06" to="യ"/>
+    <map iso="D07" to="ു"/>
+    <map iso="D08" to="ി"/>
+    <map iso="D09" to="ൊ"/>
+    <map iso="D10" to="പ"/>
+    <map iso="D11" to="["/>
+    <map iso="D12" to="]"/>
+    <map iso="C01" to="ാ"/>
+    <map iso="C02" to="സ"/>
+    <map iso="C03" to="ദ"/>
+    <map iso="C04" to="ഫ"/>
+    <map iso="C05" to="ഗ"/>
+    <map iso="C06" to="ഹ"/>
+    <map iso="C07" to="ജ"/>
+    <map iso="C08" to="ക"/>
+    <map iso="C09" to="ല"/>
+    <map iso="C10" to=";"/>
+    <map iso="C11" to="'"/>
+    <map iso="C12" to="\"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ഴ"/>
+    <map iso="B02" to="്"/>
+    <map iso="B03" to="ച"/>
+    <map iso="B04" to="വ"/>
+    <map iso="B05" to="ബ"/>
+    <map iso="B06" to="ന"/>
+    <map iso="B07" to="മ"/>
+    <map iso="B08" to=","/>
+    <map iso="B09" to="."/>
+    <map iso="B10" to="/"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="E00" to="ം"/>
+    <map iso="E01" to="!"/>
+    <map iso="E02" to="@"/>
+    <map iso="E03" to="#"/>
+    <map iso="E04" to="$"/>
+    <map iso="E05" to="%"/>
+    <map iso="E06" to="^"/>
+    <map iso="E07" to="&amp;"/>
+    <map iso="E08" to="*"/>
+    <map iso="E09" to="("/>
+    <map iso="E10" to=")"/>
+    <map iso="E11" to="_"/>
+    <map iso="E12" to="+"/>
+    <map iso="D01" to="ൌ"/>
+    <map iso="D03" to="േ"/>
+    <map iso="D04" to="റ"/>
+    <map iso="D05" to="ഥ"/>
+    <map iso="D07" to="ൂ"/>
+    <map iso="D08" to="ീ"/>
+    <map iso="D09" to="ോ"/>
+    <map iso="D11" to="{"/>
+    <map iso="D12" to="}"/>
+    <map iso="C01" to="അ"/>
+    <map iso="C02" to="ഷ"/>
+    <map iso="C03" to="ധ"/>
+    <map iso="C05" to="ഘ"/>
+    <map iso="C06" to="ഃ"/>
+    <map iso="C07" to="ഝ"/>
+    <map iso="C08" to="ഖ"/>
+    <map iso="C09" to="ള"/>
+    <map iso="C10" to=":"/>
+    <map iso="C11" to="&quot;"/>
+    <map iso="C12" to="|"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="ശ"/>
+    <map iso="B02" to="​"/>
+    <map iso="B03" to="ഛ"/>
+    <map iso="B04" to="‍"/>
+    <map iso="B05" to="ഭ"/>
+    <map iso="B06" to="ണ"/>
+    <map iso="B07" to="ം"/>
+    <map iso="B08" to="&lt;"/>
+    <map iso="B09" to="&gt;"/>
+    <map iso="B10" to="?"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="E00" to="`"/>
+    <map iso="E01" to="൧"/>
+    <map iso="E02" to="൨"/>
+    <map iso="E03" to="൩"/>
+    <map iso="E04" to="൪"/>
+    <map iso="E05" to="൫"/>
+    <map iso="E06" to="൬"/>
+    <map iso="E07" to="൭"/>
+    <map iso="E08" to="൮"/>
+    <map iso="E09" to="൯"/>
+    <map iso="E10" to="൦"/>
+    <map iso="D01" to="ഐ"/>
+    <map iso="D03" to="എ"/>
+    <map iso="D04" to="ൃ"/>
+    <map iso="D05" to="ട"/>
+    <map iso="D07" to="ഉ"/>
+    <map iso="D08" to="ഇ"/>
+    <map iso="D09" to="ഒ"/>
+    <map iso="C01" to="ആ"/>
+    <map iso="C03" to="ഡ"/>
+    <map iso="C12" to="‌"/>
+    <map iso="B00" to="|"/>
+    <map iso="B06" to="ങ"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="E00" to="~"/>
+    <map iso="E01" to="!"/>
+    <map iso="E02" to="@"/>
+    <map iso="E03" to="#"/>
+    <map iso="E04" to="₹"/>
+    <map iso="E05" to="%"/>
+    <map iso="E06" to="^"/>
+    <map iso="E07" to="&amp;"/>
+    <map iso="E08" to="*"/>
+    <map iso="E09" to="("/>
+    <map iso="E10" to=")"/>
+    <map iso="D01" to="ഔ"/>
+    <map iso="D03" to="ഏ"/>
+    <map iso="D04" to="ഋ"/>
+    <map iso="D05" to="ഠ"/>
+    <map iso="D07" to="ഊ"/>
+    <map iso="D08" to="ഈ"/>
+    <map iso="D09" to="ഓ"/>
+    <map iso="C01" to="അ"/>
+    <map iso="C03" to="ഢ"/>
+    <map iso="B00" to="¦"/>
+    <map iso="B06" to="ഞ"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+</keyboard>
+

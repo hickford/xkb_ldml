@@ -1,0 +1,210 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="fr-CA-t-k0-linux-b60be88b">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Canadian (intl., 2nd part)"/>
+    <name value="ca(multi-2gr)"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="E01" to="¹"/>
+    <map iso="E02" to="²"/>
+    <map iso="E03" to="³"/>
+    <map iso="E04" to="¼"/>
+    <map iso="E05" to="½"/>
+    <map iso="E06" to="¾"/>
+    <map iso="E12" to="\u{0327}"/>
+    <map iso="D02" to="ł"/>
+    <map iso="D03" to="œ"/>
+    <map iso="D04" to="¶"/>
+    <map iso="D05" to="ŧ"/>
+    <map iso="D06" to="←"/>
+    <map iso="D07" to="↓"/>
+    <map iso="D08" to="→"/>
+    <map iso="D09" to="ø"/>
+    <map iso="D10" to="þ"/>
+    <map iso="D12" to="\u{0303}"/>
+    <map iso="C01" to="æ"/>
+    <map iso="C02" to="ß"/>
+    <map iso="C03" to="ð"/>
+    <map iso="C05" to="ŋ"/>
+    <map iso="C06" to="ħ"/>
+    <map iso="C07" to="ĳ"/>
+    <map iso="C08" to="ĸ"/>
+    <map iso="C09" to="ŀ"/>
+    <map iso="C10" to="\u{0301}"/>
+    <map iso="C12" to="\"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B03" to="¢"/>
+    <map iso="B04" to="“"/>
+    <map iso="B05" to="”"/>
+    <map iso="B06" to="ŉ"/>
+    <map iso="B07" to="µ"/>
+    <map iso="B08" to="―"/>
+    <map iso="B09" to="·"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="E00" to="­"/>
+    <map iso="E01" to="¡"/>
+    <map iso="E03" to="£"/>
+    <map iso="E04" to="¤"/>
+    <map iso="E05" to="⅜"/>
+    <map iso="E06" to="⅝"/>
+    <map iso="E07" to="⅞"/>
+    <map iso="E08" to="™"/>
+    <map iso="E09" to="±"/>
+    <map iso="E11" to="¿"/>
+    <map iso="E12" to="\u{0328}"/>
+    <map iso="D01" to="Ω"/>
+    <map iso="D02" to="Ł"/>
+    <map iso="D03" to="Œ"/>
+    <map iso="D04" to="®"/>
+    <map iso="D05" to="Ŧ"/>
+    <map iso="D06" to="¥"/>
+    <map iso="D07" to="↑"/>
+    <map iso="D08" to="ı"/>
+    <map iso="D09" to="Ø"/>
+    <map iso="D10" to="Þ"/>
+    <map iso="D11" to="\u{030a}"/>
+    <map iso="D12" to="\u{0304}"/>
+    <map iso="C01" to="Æ"/>
+    <map iso="C02" to="§"/>
+    <map iso="C03" to="Ð"/>
+    <map iso="C04" to="ª"/>
+    <map iso="C05" to="Ŋ"/>
+    <map iso="C06" to="Ħ"/>
+    <map iso="C07" to="Ĳ"/>
+    <map iso="C09" to="Ŀ"/>
+    <map iso="C10" to="\u{030b}"/>
+    <map iso="C11" to="\u{030c}"/>
+    <map iso="C12" to="\u{0306}"/>
+    <map iso="B00" to="¦"/>
+    <map iso="B03" to="©"/>
+    <map iso="B04" to="‘"/>
+    <map iso="B05" to="’"/>
+    <map iso="B06" to="♪"/>
+    <map iso="B07" to="º"/>
+    <map iso="B08" to="×"/>
+    <map iso="B09" to="÷"/>
+    <map iso="B10" to="\u{0307}"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="E01" to="¹"/>
+    <map iso="E02" to="²"/>
+    <map iso="E03" to="³"/>
+    <map iso="E04" to="¼"/>
+    <map iso="E05" to="½"/>
+    <map iso="E06" to="¾"/>
+    <map iso="E12" to="\u{0327}"/>
+    <map iso="D02" to="ł"/>
+    <map iso="D03" to="œ"/>
+    <map iso="D04" to="¶"/>
+    <map iso="D05" to="ŧ"/>
+    <map iso="D06" to="←"/>
+    <map iso="D07" to="↓"/>
+    <map iso="D08" to="→"/>
+    <map iso="D09" to="ø"/>
+    <map iso="D10" to="þ"/>
+    <map iso="D12" to="\u{0303}"/>
+    <map iso="C01" to="æ"/>
+    <map iso="C02" to="ß"/>
+    <map iso="C03" to="ð"/>
+    <map iso="C05" to="ŋ"/>
+    <map iso="C06" to="ħ"/>
+    <map iso="C07" to="ĳ"/>
+    <map iso="C08" to="ĸ"/>
+    <map iso="C09" to="ŀ"/>
+    <map iso="C10" to="\u{0301}"/>
+    <map iso="C12" to="\"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B03" to="¢"/>
+    <map iso="B04" to="“"/>
+    <map iso="B05" to="”"/>
+    <map iso="B06" to="ŉ"/>
+    <map iso="B07" to="µ"/>
+    <map iso="B08" to="―"/>
+    <map iso="B09" to="·"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="E00" to="­"/>
+    <map iso="E01" to="¡"/>
+    <map iso="E03" to="£"/>
+    <map iso="E04" to="¤"/>
+    <map iso="E05" to="⅜"/>
+    <map iso="E06" to="⅝"/>
+    <map iso="E07" to="⅞"/>
+    <map iso="E08" to="™"/>
+    <map iso="E09" to="±"/>
+    <map iso="E11" to="¿"/>
+    <map iso="E12" to="\u{0328}"/>
+    <map iso="D01" to="Ω"/>
+    <map iso="D02" to="Ł"/>
+    <map iso="D03" to="Œ"/>
+    <map iso="D04" to="®"/>
+    <map iso="D05" to="Ŧ"/>
+    <map iso="D06" to="¥"/>
+    <map iso="D07" to="↑"/>
+    <map iso="D08" to="ı"/>
+    <map iso="D09" to="Ø"/>
+    <map iso="D10" to="Þ"/>
+    <map iso="D11" to="\u{030a}"/>
+    <map iso="D12" to="\u{0304}"/>
+    <map iso="C01" to="Æ"/>
+    <map iso="C02" to="§"/>
+    <map iso="C03" to="Ð"/>
+    <map iso="C04" to="ª"/>
+    <map iso="C05" to="Ŋ"/>
+    <map iso="C06" to="Ħ"/>
+    <map iso="C07" to="Ĳ"/>
+    <map iso="C09" to="Ŀ"/>
+    <map iso="C10" to="\u{030b}"/>
+    <map iso="C11" to="\u{030c}"/>
+    <map iso="C12" to="\u{0306}"/>
+    <map iso="B00" to="¦"/>
+    <map iso="B03" to="©"/>
+    <map iso="B04" to="‘"/>
+    <map iso="B05" to="’"/>
+    <map iso="B06" to="♪"/>
+    <map iso="B07" to="º"/>
+    <map iso="B08" to="×"/>
+    <map iso="B09" to="÷"/>
+    <map iso="B10" to="\u{0307}"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <transforms type="simple">
+    <transform from="\u{0303} " to="~"/>
+    <transform from="\u{0303}\u{0303}" to="~"/>
+    <transform from="\u{0301} " to="'"/>
+    <transform from="\u{0301}\u{0301}" to="´"/>
+    <transform from="\u{030a} " to="°"/>
+    <transform from="\u{030a}\u{030a}" to="°"/>
+    <transform from="\u{0304} " to="¯"/>
+    <transform from="\u{0304}\u{0304}" to="¯"/>
+    <transform from="\u{0306} " to="˘"/>
+    <transform from="\u{0306}\u{0306}" to="˘"/>
+    <transform from="\u{0307} " to="˙"/>
+    <transform from="\u{0307}\u{0307}" to="˙"/>
+    <transform from="\u{030b} " to="˝"/>
+    <transform from="\u{030b}\u{030b}" to="˝"/>
+    <transform from="\u{030c} " to="ˇ"/>
+    <transform from="\u{030c}\u{030c}" to="ˇ"/>
+    <transform from="\u{0327} " to="¸"/>
+    <transform from="\u{0327}\u{0327}" to="¸"/>
+    <transform from="\u{0328} " to="˛"/>
+    <transform from="\u{0328}\u{0328}" to="˛"/>
+    <transform from="\u{0304}Æ" to="Ǣ"/>
+    <transform from="\u{0304}æ" to="ǣ"/>
+    <transform from="\u{0301}Æ" to="Ǽ"/>
+    <transform from="\u{0301}æ" to="ǽ"/>
+    <transform from="\u{0301}ø" to="ǿ"/>
+    <transform from="\u{0301}Ω" to="Ώ"/>
+    <transform from="\u{0327}¢" to="₵"/>
+    <transform from="\u{0303}&lt;" to="≲"/>
+    <transform from="\u{0301}ŋ" to="ŋ"/>
+    <transform from="\u{0301}Ŋ" to="Ŋ"/>
+  </transforms>
+</keyboard>
+

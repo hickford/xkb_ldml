@@ -1,0 +1,188 @@
+<!DOCTYPE keyboard SYSTEM "../dtd/ldmlKeyboard.dtd">
+<keyboard locale="am-t-k0-linux">
+  <version platform="0" number="$Revision$"/>
+  <names>
+    <name value="Amharic"/>
+    <name value="et"/>
+  </names>
+  <settings transformFailure="omit" transformPartial="hide"/>
+  <keyMap>
+    <map iso="E01" to="፩"/>
+    <map iso="E02" to="፪"/>
+    <map iso="E03" to="፫"/>
+    <map iso="E04" to="፬"/>
+    <map iso="E05" to="፭"/>
+    <map iso="E06" to="፮"/>
+    <map iso="E07" to="፯"/>
+    <map iso="E08" to="፰"/>
+    <map iso="E09" to="፱"/>
+    <map iso="E10" to="፻"/>
+    <map iso="E11" to="-"/>
+    <map iso="E12" to="="/>
+    <map iso="D01" to="ቀ"/>
+    <map iso="D02" to="ወ"/>
+    <map iso="D03" to="﹩"/>
+    <map iso="D04" to="ረ"/>
+    <map iso="D05" to="ተ"/>
+    <map iso="D06" to="የ"/>
+    <map iso="D07" to="﹵"/>
+    <map iso="D08" to="ﹱ"/>
+    <map iso="D09" to="ﹳ"/>
+    <map iso="D10" to="ፐ"/>
+    <map iso="D11" to="ፀ"/>
+    <map iso="D12" to="ጨ"/>
+    <map iso="C01" to="﹧"/>
+    <map iso="C02" to="ሰ"/>
+    <map iso="C03" to="ደ"/>
+    <map iso="C04" to="ፈ"/>
+    <map iso="C05" to="ገ"/>
+    <map iso="C06" to="ሀ"/>
+    <map iso="C07" to="ጀ"/>
+    <map iso="C08" to="ከ"/>
+    <map iso="C09" to="ለ"/>
+    <map iso="C10" to="።"/>
+    <map iso="C11" to="፦"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ዘ"/>
+    <map iso="B02" to="አ"/>
+    <map iso="B03" to="ቸ"/>
+    <map iso="B04" to="ሸ"/>
+    <map iso="B05" to="በ"/>
+    <map iso="B06" to="ነ"/>
+    <map iso="B07" to="መ"/>
+    <map iso="B08" to="፣"/>
+    <map iso="B09" to="፤"/>
+    <map iso="B10" to="፧"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="shift">
+    <map iso="E01" to="፲"/>
+    <map iso="E02" to="፳"/>
+    <map iso="E03" to="፴"/>
+    <map iso="E04" to="፵"/>
+    <map iso="E05" to="፶"/>
+    <map iso="E06" to="፷"/>
+    <map iso="E07" to="፸"/>
+    <map iso="E08" to="፹"/>
+    <map iso="E09" to="፺"/>
+    <map iso="E10" to="፼"/>
+    <map iso="E11" to="_"/>
+    <map iso="E12" to="+"/>
+    <map iso="D01" to="ቐ"/>
+    <map iso="D03" to="ﹰ"/>
+    <map iso="D05" to="ጠ"/>
+    <map iso="D07" to="ﹶ"/>
+    <map iso="D08" to="ﹲ"/>
+    <map iso="D09" to="ﹴ"/>
+    <map iso="D10" to="ጰ"/>
+    <map iso="D11" to="ጸ"/>
+    <map iso="D12" to="ኀ"/>
+    <map iso="C01" to="﹨"/>
+    <map iso="C02" to="ሠ"/>
+    <map iso="C03" to="ዸ"/>
+    <map iso="C05" to="ጘ"/>
+    <map iso="C06" to="ሐ"/>
+    <map iso="C08" to="ኸ"/>
+    <map iso="C10" to="፡"/>
+    <map iso="C11" to="፥"/>
+    <map iso="C12" to="‐"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="ዠ"/>
+    <map iso="B02" to="ዐ"/>
+    <map iso="B03" to="ﹸ"/>
+    <map iso="B04" to="ቨ"/>
+    <map iso="B06" to="ኘ"/>
+    <map iso="B10" to="?"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR">
+    <map iso="E01" to="፩"/>
+    <map iso="E02" to="፪"/>
+    <map iso="E03" to="፫"/>
+    <map iso="E04" to="፬"/>
+    <map iso="E05" to="፭"/>
+    <map iso="E06" to="፮"/>
+    <map iso="E07" to="፯"/>
+    <map iso="E08" to="፰"/>
+    <map iso="E09" to="፱"/>
+    <map iso="E10" to="፻"/>
+    <map iso="E11" to="-"/>
+    <map iso="E12" to="="/>
+    <map iso="D01" to="ቀ"/>
+    <map iso="D02" to="ወ"/>
+    <map iso="D03" to="﹩"/>
+    <map iso="D04" to="ረ"/>
+    <map iso="D05" to="ተ"/>
+    <map iso="D06" to="የ"/>
+    <map iso="D07" to="﹵"/>
+    <map iso="D08" to="ﹱ"/>
+    <map iso="D09" to="ﹳ"/>
+    <map iso="D10" to="ፐ"/>
+    <map iso="D11" to="ፀ"/>
+    <map iso="D12" to="ጨ"/>
+    <map iso="C01" to="﹧"/>
+    <map iso="C02" to="ሰ"/>
+    <map iso="C03" to="ደ"/>
+    <map iso="C04" to="ፈ"/>
+    <map iso="C05" to="ገ"/>
+    <map iso="C06" to="ሀ"/>
+    <map iso="C07" to="ጀ"/>
+    <map iso="C08" to="ከ"/>
+    <map iso="C09" to="ለ"/>
+    <map iso="C10" to="።"/>
+    <map iso="C11" to="፦"/>
+    <map iso="B00" to="&lt;"/>
+    <map iso="B01" to="ዘ"/>
+    <map iso="B02" to="አ"/>
+    <map iso="B03" to="ቸ"/>
+    <map iso="B04" to="ሸ"/>
+    <map iso="B05" to="በ"/>
+    <map iso="B06" to="ነ"/>
+    <map iso="B07" to="መ"/>
+    <map iso="B08" to="፣"/>
+    <map iso="B09" to="፤"/>
+    <map iso="B10" to="፧"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+  <keyMap modifiers="altR+shift">
+    <map iso="E01" to="፲"/>
+    <map iso="E02" to="፳"/>
+    <map iso="E03" to="፴"/>
+    <map iso="E04" to="፵"/>
+    <map iso="E05" to="፶"/>
+    <map iso="E06" to="፷"/>
+    <map iso="E07" to="፸"/>
+    <map iso="E08" to="፹"/>
+    <map iso="E09" to="፺"/>
+    <map iso="E10" to="፼"/>
+    <map iso="E11" to="_"/>
+    <map iso="E12" to="+"/>
+    <map iso="D01" to="ቐ"/>
+    <map iso="D03" to="ﹰ"/>
+    <map iso="D05" to="ጠ"/>
+    <map iso="D07" to="ﹶ"/>
+    <map iso="D08" to="ﹲ"/>
+    <map iso="D09" to="ﹴ"/>
+    <map iso="D10" to="ጰ"/>
+    <map iso="D11" to="ጸ"/>
+    <map iso="D12" to="ኀ"/>
+    <map iso="C01" to="﹨"/>
+    <map iso="C02" to="ሠ"/>
+    <map iso="C03" to="ዸ"/>
+    <map iso="C05" to="ጘ"/>
+    <map iso="C06" to="ሐ"/>
+    <map iso="C08" to="ኸ"/>
+    <map iso="C10" to="፡"/>
+    <map iso="C11" to="፥"/>
+    <map iso="C12" to="‐"/>
+    <map iso="B00" to="&gt;"/>
+    <map iso="B01" to="ዠ"/>
+    <map iso="B02" to="ዐ"/>
+    <map iso="B03" to="ﹸ"/>
+    <map iso="B04" to="ቨ"/>
+    <map iso="B06" to="ኘ"/>
+    <map iso="B10" to="?"/>
+    <map iso="A03" to=" "/>
+  </keyMap>
+</keyboard>
+
