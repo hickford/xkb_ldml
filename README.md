@@ -12,8 +12,8 @@ Unicode's [Common Locale Data Repository](http://cldr.unicode.org/) (CLDR) colle
 I generated LDML and charts for Linux from [xkeyboard-config](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config)
 (commit [297bb515](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/commit/297bb51556bf72c26acc26b411cfab8116376d6e)):
 
-* LDML https://github.com/hickford/xkb_ldml/tree/cldr-keyboards-linux
-* Charts https://hickford.github.io/xkb_ldml/layouts/
+* LDML https://github.com/hickford/xkb_ldml/tree/main/cldr-staging/docs/charts/40/keyboards/layouts
+* Charts https://hickford.github.io/xkb_ldml/cldr-staging/docs/charts/40/keyboards/layouts/index.html
 
 ## Developer instructions
 
