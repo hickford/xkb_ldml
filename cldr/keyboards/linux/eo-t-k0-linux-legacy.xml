@@ -108,7 +108,7 @@
     <map iso="B10" to="?"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="D01" to="@"/>
     <map iso="D02" to="^"/>
     <map iso="D03" to="€"/>
@@ -123,7 +123,7 @@
     <map iso="B02" to="’"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="B00" to="¦"/>
     <map iso="A03" to=" "/>
   </keyMap>

@@ -106,7 +106,7 @@
     <map iso="B10" to="・"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E01" to="ヌ"/>
     <map iso="E02" to="フ"/>
     <map iso="E03" to="ア"/>
@@ -156,7 +156,7 @@
     <map iso="B10" to="メ"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E01" to="ヌ"/>
     <map iso="E02" to="フ"/>
     <map iso="E03" to="ァ"/>

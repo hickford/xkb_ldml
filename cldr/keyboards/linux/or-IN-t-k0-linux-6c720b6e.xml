@@ -103,7 +103,7 @@
     <map iso="B10" to="@"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E01" to="୧"/>
     <map iso="E02" to="୨"/>
     <map iso="E03" to="୩"/>
@@ -152,7 +152,7 @@
     <map iso="B10" to="ଯ"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E01" to="୧"/>
     <map iso="E02" to="୨"/>
     <map iso="E03" to="୩"/>

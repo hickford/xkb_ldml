@@ -105,7 +105,7 @@
     <map iso="B10" to="য"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E01" to="১"/>
     <map iso="E02" to="২"/>
     <map iso="E03" to="৩"/>
@@ -155,7 +155,7 @@
     <map iso="B10" to="য়"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E01" to="১"/>
     <map iso="E02" to="২"/>
     <map iso="E03" to="৩"/>

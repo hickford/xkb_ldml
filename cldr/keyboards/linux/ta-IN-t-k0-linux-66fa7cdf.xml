@@ -90,7 +90,7 @@
     <map iso="B08" to="®"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E01" to="·"/>
     <map iso="E02" to="\u{0082}"/>
     <map iso="E03" to="\u{0083}"/>
@@ -132,7 +132,7 @@
     <map iso="B08" to="þ"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E01" to="¤"/>
     <map iso="E02" to="¥"/>
     <map iso="E03" to="\u{0088}"/>

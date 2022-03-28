@@ -98,7 +98,7 @@
     <map iso="B10" to="?"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E01" to="\u{0304}"/>
     <map iso="E02" to="\u{0323}"/>
     <map iso="E03" to="\u{0307}"/>
@@ -121,7 +121,7 @@
     <map iso="B09" to="»"/>
     <map iso="B10" to="‌"/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="B00" to="¦"/>
   </keyMap>
 </keyboard>

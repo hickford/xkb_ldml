@@ -42,11 +42,11 @@
     <map iso="B00" to="&gt;"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="B00" to="|"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="B00" to="¦"/>
     <map iso="A03" to=" "/>
   </keyMap>

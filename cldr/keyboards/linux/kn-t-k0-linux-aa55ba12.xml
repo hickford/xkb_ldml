@@ -108,7 +108,7 @@
     <map iso="B10" to="?"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E00" to="“"/>
     <map iso="E01" to="೧"/>
     <map iso="E02" to="೨"/>
@@ -141,7 +141,7 @@
     <map iso="B09" to="ೞ"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E02" to="₨"/>
     <map iso="E04" to="₹"/>
     <map iso="E06" to="‌"/>

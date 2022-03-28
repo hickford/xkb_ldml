@@ -108,7 +108,7 @@
     <map iso="B10" to="?"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E00" to="ၐ"/>
     <map iso="E01" to="၁"/>
     <map iso="E02" to="၂"/>
@@ -159,7 +159,7 @@
     <map iso="B10" to="/"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E00" to="ဎ"/>
     <map iso="E01" to="ဍ"/>
     <map iso="E02" to="ၒ"/>

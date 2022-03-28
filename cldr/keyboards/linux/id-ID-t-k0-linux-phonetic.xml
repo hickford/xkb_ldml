@@ -93,7 +93,7 @@
     <map iso="B10" to="؟"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="E01" to="1"/>
     <map iso="E02" to="2"/>
     <map iso="E03" to="3"/>
@@ -116,7 +116,7 @@
     <map iso="B10" to="؍"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="E04" to="$"/>
     <map iso="E05" to="%"/>
     <map iso="E11" to="_"/>

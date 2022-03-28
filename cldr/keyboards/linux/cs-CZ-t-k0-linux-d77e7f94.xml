@@ -68,7 +68,7 @@
     <map iso="B07" to="Ĺ"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR">
+  <keyMap modifiers="ctrl+alt">
     <map iso="D01" to="ä"/>
     <map iso="D02" to="ě"/>
     <map iso="D03" to="é"/>
@@ -99,7 +99,7 @@
     <map iso="B07" to="ĺ"/>
     <map iso="A03" to=" "/>
   </keyMap>
-  <keyMap modifiers="altR+shift">
+  <keyMap modifiers="ctrl+alt+shift">
     <map iso="D01" to="Ä"/>
     <map iso="D02" to="Ě"/>
     <map iso="D03" to="É"/>
